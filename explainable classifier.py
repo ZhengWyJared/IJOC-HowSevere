@@ -419,11 +419,11 @@ for i in tqdm(range(num_repeats), desc="Overall Progress (Repeats)", position=0)
         print(f"{fold_id}: Finished training with Macro F1 Score: {f1_macro:.4f}")
         return f1_macro
     param_grid = {
-        "common_num_intervals": range(6, 7),
-        "k": range(6, 7),
-        "C1": [0],
-        "C2": [0.1],
-        "C3": [0.05]
+        "common_num_intervals": range(6, 10),
+        "k": range(6, 10),
+        "C1": [0, 0.1],
+        "C2": [0.1, 1],
+        "C3": [0, 0.05, 0.1]
     }
     param_combinations = list(product(
         param_grid["common_num_intervals"],
