@@ -328,7 +328,7 @@ solver = SolverFactory('scip')
 solver.options['limits/gap'] = 0.0    #global optimal
 solver.options['limits/time'] = 12000
 solver.options['display/verblevel'] = 4    
-solver.options['presolving/maxrounds'] = 0
+
 total_vars = 0
 total_binary_vars = 0
 total_continuous_vars = 0
